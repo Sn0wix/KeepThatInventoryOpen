@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "net.sn0wix_.keepthatinvopen.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"client": [
+		"ClientPlayerEntityMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

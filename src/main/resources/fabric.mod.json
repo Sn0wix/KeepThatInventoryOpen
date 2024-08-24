@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "keepthatinventoryopen",
+  "version": "${version}",
+  "name": "KeepThatInventoryOpen",
+  "description": "A simple mod that takes off inventory closing packets, so you can use the crafting grid as an additional storage space.",
+  "authors": [
+    "Sn0wix_"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/keepthatinventoryopen/icon.png",
+  "environment": "client",
+  "mixins": [
+    "keepthatinvopen.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": "*",
+    "java": ">=17"
+  }
+}

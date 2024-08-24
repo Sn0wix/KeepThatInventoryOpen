@@ -8,8 +8,14 @@
     "Sn0wix_"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://modrinth.com/mod/keepthatinventoryopen",
+    "sources": "https://github.com/Sn0wix/KeepThatInventoryOpen",
+    "issues": "https://github.com/Sn0wix/KeepThatInventoryOpen/issues"
+  },
+  "entrypoints": {
+    "client": [
+      "net.sn0wix_.keepthatinventoryopen.KeepThatInventoryOpen"
+    ]
   },
   "license": "MIT",
   "icon": "assets/keepthatinventoryopen/icon.png",
@@ -20,6 +26,6 @@
   "depends": {
     "fabricloader": "*",
     "minecraft": "*",
-    "java": ">=8"
+    "java": ">=17"
   }
 }

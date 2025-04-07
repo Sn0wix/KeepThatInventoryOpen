@@ -1,0 +1,8 @@
+{
+  "text.keepthatinventoryopen.settings": "KeepThatInventoryOpen Settings",
+  "options.keepthatinventoryopen.enabled": "Enabled",
+  "options.keepthatinventoryopen.onDisconnect": "On Disconnect",
+  "text.keepthatinventoryopen.onDisconnect.true": "Send close packet",
+  "text.keepthatinventoryopen.onDisconnect.false": "Do nothing",
+  "tooltip.keepthatinventoryopen.onDisconnect": "Some servers delete items stored in the crafting grid when you disconnect."
+}

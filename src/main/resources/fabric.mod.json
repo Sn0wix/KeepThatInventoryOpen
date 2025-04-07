@@ -15,6 +15,9 @@
   "entrypoints": {
     "client": [
       "net.sn0wix_.keepthatinventoryopen.KeepThatInventoryOpen"
+    ],
+    "modmenu": [
+      "net.sn0wix_.keepthatinventoryopen.gui.ModmenuGui"
     ]
   },
   "license": "MIT",
@@ -26,6 +29,7 @@
   "depends": {
     "fabricloader": "*",
     "minecraft": "*",
-    "java": ">=21"
+    "java": "*",
+    "modmenu": "*"
   }
 }

@@ -7,6 +7,7 @@ import net.sn0wix_.keepthatinventoryopen.KeepThatInventoryOpen;
 public class Settings {
     public static SimpleOption<Boolean> enabled;
     public static SimpleOption<Boolean> onDisconnect;
+    public static SimpleOption<Boolean> displayWarning;
 
     public static void init() {
         enabled = SimpleOption.ofBoolean("options." + KeepThatInventoryOpen.MOD_ID + ".enabled", SimpleOption.emptyTooltip(), (optionText, value) -> Text.of(value.toString()), true, aBoolean -> KeepThatInventoryOpen.CONFIG.enabled = aBoolean);
@@ -14,5 +15,8 @@ public class Settings {
 
         onDisconnect = SimpleOption.ofBoolean("options." + KeepThatInventoryOpen.MOD_ID + ".onDisconnect", SimpleOption.constantTooltip(Text.translatable("tooltip." + KeepThatInventoryOpen.MOD_ID + ".onDisconnect")), (optionText, value) -> Text.translatable("text." + KeepThatInventoryOpen.MOD_ID + ".onDisconnect." + value.toString()), true, aBoolean -> KeepThatInventoryOpen.CONFIG.onDisconnect = aBoolean);
         onDisconnect.setValue(KeepThatInventoryOpen.CONFIG.onDisconnect);
+
+        displayWarning = SimpleOption.ofBoolean("options." + KeepThatInventoryOpen.MOD_ID + ".displayWarning", SimpleOption.constantTooltip(Text.translatable("tooltip." + KeepThatInventoryOpen.MOD_ID + ".displayWarning")), (optionText, value) -> Text.translatable("text." + KeepThatInventoryOpen.MOD_ID + ".displayWarning." + value.toString()), true, aBoolean -> KeepThatInventoryOpen.CONFIG.onDisconnect = aBoolean);
+        displayWarning.setValue(KeepThatInventoryOpen.CONFIG.displayWarning);
     }
 }

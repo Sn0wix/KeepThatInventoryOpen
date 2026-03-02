@@ -1,8 +1,14 @@
 {
   "text.keepthatinventoryopen.settings": "KeepThatInventoryOpen Settings",
+  "screen.keepthatinventoryopen.disconnect.warning": "§c§lDisconnect Warning",
+  "text.keepthatinventoryopen.disconnect.warning": "You have items stored in the crafting grid or the mouse slot. These items will be thrown out of your inventory if you disconnect. Do you want to proceed?",
   "options.keepthatinventoryopen.enabled": "Enabled",
   "options.keepthatinventoryopen.onDisconnect": "On Disconnect",
+  "options.keepthatinventoryopen.displayWarning": "Display Warning Screen",
   "text.keepthatinventoryopen.onDisconnect.true": "Send close packet",
   "text.keepthatinventoryopen.onDisconnect.false": "Do nothing",
-  "tooltip.keepthatinventoryopen.onDisconnect": "Some servers delete items stored in the crafting grid when you disconnect."
+  "tooltip.keepthatinventoryopen.onDisconnect": "Some servers may delete items stored in the crafting grid upon disconnecting.",
+  "text.keepthatinventoryopen.displayWarning.true": "If Relevant",
+  "text.keepthatinventoryopen.displayWarning.false": "Never",
+  "tooltip.keepthatinventoryopen.displayWarning": "Display a warning if the crafting slots are occupied upon disconnecting."
 }

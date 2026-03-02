@@ -17,6 +17,7 @@ public class SettingsScreen extends GameOptionsScreen {
     public void addOptions() {
         this.body.addSingleOptionEntry(Settings.enabled);
         this.body.addSingleOptionEntry(Settings.onDisconnect);
+        this.body.addSingleOptionEntry(Settings.displayWarning);
     }
 
     @Override

@@ -1,8 +1,8 @@
 package net.sn0wix_.keepthatinventoryopen.mixin;
 
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.network.packet.c2s.play.CloseHandledScreenC2SPacket;
-import net.minecraft.text.Text;
+import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ServerboundContainerClosePacket;
 import net.sn0wix_.keepthatinventoryopen.KeepThatInventoryOpen;
 import net.sn0wix_.keepthatinventoryopen.config.Settings;
 import org.spongepowered.asm.mixin.Mixin;
@@ -10,12 +10,12 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(MinecraftClient.class)
+@Mixin(Minecraft.class)
 public class MinecraftClientMixin {
-    @Inject(method = "disconnect(Lnet/minecraft/text/Text;)V", at = @At("HEAD"))
-    private void injectDisconnect(Text reasonText, CallbackInfo ci){
-        if (Settings.enabled.getValue() && Settings.onDisconnect.getValue()) {
-            MinecraftClient.getInstance().getNetworkHandler().sendPacket(new CloseHandledScreenC2SPacket(0));
+    @Inject(method = "disconnectFromWorld(Lnet/minecraft/network/chat/Component;)V", at = @At("HEAD"))
+    private void injectDisconnect(Component reasonText, CallbackInfo ci){
+        if (Settings.enabled.get() && Settings.onDisconnect.get()) {
+            Minecraft.getInstance().getConnection().send(new ServerboundContainerClosePacket(0));
             KeepThatInventoryOpen.LOGGER.info("Stimulated close inventory packet upon disconnecting");
         }
     }

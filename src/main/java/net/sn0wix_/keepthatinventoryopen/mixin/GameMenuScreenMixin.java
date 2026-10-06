@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(PauseScreen.class)
 public class GameMenuScreenMixin {
     //this.exitButton = adder.add(ButtonWidget.builder(text, button -> { <--HERE
-    @Inject(method = "lambda$createPauseMenu$11", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "lambda$createPauseMenu$10", at = @At("HEAD"), cancellable = true)
     private void injectOnDisconnect(Button button, CallbackInfo ci) {
         try {
             if (Settings.enabled.get()) {
